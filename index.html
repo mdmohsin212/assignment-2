@@ -20,65 +20,104 @@
   </head>
 
   <body>
-    <div class="search-bar d-flex justify-content-center align-items-center">
-      <form class="d-flex w-50 mt-5 pt-5" role="search">
-        <input
-          class="form-control me-2"
-          id="Search-text"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-          style="height: 60px"
-        />
-        <button id="submit" class="btn btn-success" type="button">
-          Search
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-5">
+      <div class="container-fluid">
+        <a class="navbar-brand text-info" href="#">Food Ai</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-      </form>
-    </div>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav mx-auto text-center fs-5 gap-3">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Hire</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-    <div class="container mt-3">
-      <div class="row">
-        <div class="cart-container col-12 col-md-2 border border-2 mt-3 mt-md-0 order-1 order-md-2 mb-3">
+    <main class="p-3">
+      <div class="search-bar d-flex justify-content-center align-items-center">
+        <form class="d-flex w-50 mt-5 pt-5" role="search">
+          <input
+            class="form-control me-2"
+            id="Search-text"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            style="height: 60px"
+          />
+          <button id="submit" class="btn btn-success" type="button">
+            Search
+          </button>
+        </form>
+      </div>
+
+      <div class="container mt-3">
+        <div class="row">
+          <div
+            class="cart-container col-12 col-md-2 border border-2 mt-3 mt-md-0 order-1 order-md-2 mb-3"
+          >
             <h3 class="text-center">Cart</h3>
             <hr />
             <div id="cart-item" class="cart-item text-center">
               <h3 class="text-start">Total: <span id="count">0</span></h3>
               <hr />
             </div>
+          </div>
+          <div
+            id="meal-container"
+            class="meal-container col-12 col-md-10 d-flex flex-wrap align-items-center gap-1 justify-content-center border border-2 p-3 order-2 order-md-1"
+          ></div>
         </div>
-        <div
-          id="meal-container"
-          class="meal-container col-12 col-md-10 d-flex flex-wrap align-items-center gap-1 justify-content-center border border-2 p-3 order-2 order-md-1"
-        ></div>
       </div>
-    </div>
 
-    <div class="modal" tabindex="-1" id="exampleModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 id="modal-title" class="modal-title"></h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div id="modal-body" class="modal-body"></div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal" tabindex="-1" id="exampleModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 id="modal-title" class="modal-title"></h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div id="modal-body" class="modal-body"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
+
+    <footer class="bg-dark text-center text-white py-3">
+      <div class="container">
+        <p class="mb-2">Copyright © 2024 | Md Mohsin</p>
+        <p>Privacy Policy</p>
+        <p>Terms of Service</p>
+      </div>
+    </footer>
 
     <script src="app.js"></script>
     <script
